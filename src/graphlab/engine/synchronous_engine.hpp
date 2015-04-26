@@ -1014,6 +1014,9 @@ namespace graphlab {
     message_exchange(dc),
     aggregator(dc, graph, new context_type(*this, graph)) {
     // Process any additional options
+    
+    logstream(LOG_INFO) << "NCPUS : " << ncpus;
+
     std::vector<std::string> keys = opts.get_engine_args().get_option_keys();
     per_thread_compute_time.resize(opts.get_ncpus());
     use_cache = false;

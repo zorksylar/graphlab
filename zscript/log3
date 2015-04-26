@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+Updates: 484660900
+INFO:     synchronous_engine.hpp(start:1444): Compute Balance: 665.463 665.646 670.409 663.007
+Finished Running engine in 115.6 seconds.
+Total rank: 3.88819e+06
+Total rank: Total rank: 3.88819e+06Total rank: 3.88819e+063.88819e+06
+
+
+Totalpr = 3.88819e+06
+Totalpr = 3.88819e+06
+Totalpr = 3.88819e+06
+Totalpr = 3.88819e+06
+
+
+
+
+
+INFO:     distributed_ingress_base.hpp(exchange_global_info:546): Graph info:
+         nverts: 4846609
+         nedges: 68475391
+         nreplicas: 12178830
+         replication factor: 2.51286
+#vertices: 4846609 #edges:68475391
+INFO:     omni_engine.hpp(omni_engine:191): Using the Synchronous engine.
+INFO:     omni_engine.hpp(omni_engine:191): Using the Synchronous engine.
+INFO:     omni_engine.hpp(omni_engine:191): Using the Synchronous engine.
+INFO:     omni_engine.hpp(omni_engine:191): Using the Synchronous engine.
+INFO:     synchronous_engine.hpp(synchronous_engine:1018): NCPUS : 16Engine Option: max_iterations = 100
+INFO:     synchronous_engine.hpp(synchronous_engine:1052): Engine Option: sched_allv = 1
+INFO:     synchronous_engine.hpp(synchronous_engine:1037): Engine Option: use_cache = 0

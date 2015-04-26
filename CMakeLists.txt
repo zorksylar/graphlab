@@ -13,6 +13,9 @@ cmake_policy(SET CMP0005 NEW)
 # defined
 set(CMAKE_MODULE_PATH ${GraphLab_SOURCE_DIR}/cmake)
 
+set(CMAKE_PREFIX_PATH "/home/zork/loclib/mpich-3.1.4" "/usr/local" "/usr" )
+
+
 # TODO: what is this used by
 set(BUILD_SHARED_LIBS ON)
 
@@ -237,8 +240,9 @@ if(NOT NO_TCMALLOC)
     ExternalProject_Add(libtcmalloc
     PREFIX ${GraphLab_SOURCE_DIR}/deps/tcmalloc
     # Some users can't access domain googlecode.com ,This is a spare URL
-    # URL http://sourceforge.jp/projects/sfnet_gperftools.mirror/downloads/gperftools-2.0.tar.gz
-    URL http://gperftools.googlecode.com/files/gperftools-2.0.tar.gz
+    #URL http://sourceforge.jp/projects/sfnet_gperftools.mirror/downloads/gperftools-2.0.tar.gz
+    #URL http://gperftools.googlecode.com/files/gperftools-2.0.tar.gz
+    URL /home/zork/pack/gperftools-2.0.tar.gz
     URL_MD5 13f6e8961bc6a26749783137995786b6
     PATCH_COMMAND patch -N -p0 -i ${GraphLab_SOURCE_DIR}/patches/tcmalloc.patch || true
     CONFIGURE_COMMAND <SOURCE_DIR>/configure --enable-frame-pointers --prefix=<INSTALL_DIR> ${tcmalloc_shared}

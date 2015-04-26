@@ -1,0 +1,24 @@
+/home/zork/data/soc-live/soc-LiveJournal1.txt
+/home/zork/data/soc-live/graphlab_out/soc
+GRAPHLAB_SUBNET_ID/GRAPHLAB_SUBNET_MASK environment variables not defined.
+Using default values
+Subnet ID: 0.0.0.0
+Subnet Mask: 0.0.0.0
+Will find first IPv4 non-loopback address matching the subnet
+--iterations set. Forcing Synchronous engine, and running for 100 iterations.
+Loading graph in format: snap
+# Directed graph (each unordered pair of nodes is saved once): soc-LiveJournal1.txt 
+# Directed LiveJournal friednship social network
+# Nodes: 4847571 Edges: 68993773
+# FromNodeId	ToNodeId
+#vertices: 4846609 #edges:68475391
+Updates: 484660900
+Finished Running engine in 122.2 seconds.
+Total rank: 3.88819e+06
+Total rank: 3.88819e+06Total rank: 
+3.88819e+06
+Total rank: 3.88819e+06
+Totalpr = 3.88819e+06
+Totalpr = 3.88819e+06
+Totalpr = 3.88819e+06
+Totalpr = 3.88819e+06
