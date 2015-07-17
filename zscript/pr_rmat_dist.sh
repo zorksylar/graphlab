@@ -3,17 +3,18 @@ export LD_LIBRARY_PATH=/home/zork/loclib/mpich-3.1.4/lib/
 export GRAPHLAB_SUBNET_ID=10.0.0.0
 export GRAPHLAB_SUBNET_MASK=255.255.255.0
 
-DATA_DIR=/home/zork/data/twitter
-IN_NAME=twitter_rv.net
+DATA_DIR=/home/zork/data/kdt-data/rmat-23-100
+IN_NAME=rmat-23-100.snap.gl
 OUT_SUB_DIR=graphlab_4_out
-OUT_PRE=gl_tw
+OUT_PRE=gl_rmat
+
 
 ITERS=100
-NP=8
+NP=16
 
 EXEC=/home/zork/loclib/mpich-3.1.4/bin/mpiexec
 APP=/home/zork/dev-pla/graphlab/release/toolkits/graph_analytics/pagerank
-FHOST=/home/zork/dev-pla/graphlab/zscript/conf/machines_ipoib_8
+FHOST=/home/zork/dev-pla/graphlab/zscript/conf/machines_4
 
 DATA_IN=${DATA_DIR}/${IN_NAME}
 DATA_OUT_DIR=${DATA_DIR}/${OUT_SUB_DIR}
