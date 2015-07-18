@@ -84,15 +84,15 @@ OUT_DIR=""
 OUT_PREFIX=""
 
 if [ $s_graph == "wg" ] ; then
-  GRAPH_PREFIX=/home/zork/data/web-google/web-google.txt
+  GRAPH_PREFIX=/home/zork/data/web-google/glab_in/web-google.txt
   OUT_DIR=/home/zork/data/web-google/glab_${k_node}_out
 
 elif [ $s_graph == "tw" ]; then
-  GRAPH_PREFIX=/home/zork/data/twitter/twitter_rv.net
+  GRAPH_PREFIX=/home/zork/data/twitter/glab_in/twitter_rv.net
   OUT_DIR=/home/zork/data/twitter/glab_${k_node}_out
 
 elif [ $s_graph == "live" ]; then
-  GRAPH_PREFIX=/home/zork/data/soc-live/soc-LiveJournal1.txt
+  GRAPH_PREFIX=/home/zork/data/soc-live/glab_in/soc-LiveJournal1.txt
   OUT_DIR=/home/zork/data/soc-live/glab_${k_node}_out
 
 elif [ $s_graph == "test" ]; then
@@ -103,7 +103,7 @@ else
 fi
 
 mkdir -p ${OUT_DIR}
-OUT_PREFIX=${OUT_DIR}/${s_graph}
+OUT_PREFIX=${OUT_DIR}/${s_graph}_${k_niters}
 
 
 GRAPH_FORMAT=snap
