@@ -15,7 +15,7 @@ function print_help {
   echo " --np=<np>                        number of processors "
   echo " --niters=<niters>                nubmer of iterations "
   echo " --graph=<graph_name>             graph name [nf, ]"
-  echo " --d=<als nlatent>                number of latent "
+  echo " --d=<sgd nlatent>                number of latent "
   echo ""
   exit 1
 } # end of print_help
@@ -57,7 +57,7 @@ done
 # default optinos 
 k_node=1
 k_np=1
-k_niters=18446744073709551615
+k_niters=10
 s_graph=nf
 k_latent=20
 
@@ -102,7 +102,7 @@ mkdir -p ${OUT_DIR}
 
 OUT_PREFIX=${OUT_DIR}/${s_graph}_${k_latent}_${k_niters}
 
-APP=/home/zork/dev-pla/graphlab/release/toolkits/collaborative_filtering/als
+APP=/home/zork/dev-pla/graphlab/release/toolkits/collaborative_filtering/sgd
 
 # Pagerank ops
 APP_OPTS="--matrix ${GRAPH_PREFIX}"
