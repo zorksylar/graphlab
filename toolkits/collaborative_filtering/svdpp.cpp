@@ -82,8 +82,14 @@ struct vertex_data {
    *  data 
    */
   vertex_data() : nupdates(0) { randomize(); } 
+  //vertex_data() : nupdates(0) { reset(); } 
   /** \brief Randomizes the latent pvec */
   void randomize() { pvec.resize(NLATENT); pvec.setRandom(); weight.resize(NLATENT); weight.setRandom(); }
+  /** zero latent pvec */
+  void reset() { 
+    pvec.resize(NLATENT); pvec = vec_type::Zero(NLATENT); 
+    weight.resize(NLATENT); weight = vec_type::Zero(NLATENT);
+  }
   /** \brief Save the vertex data to a binary archive */
   void save(graphlab::oarchive& arc) const { 
     arc << nupdates << pvec << weight << bias;

@@ -15,7 +15,7 @@ function print_help {
   echo " --np=<np>                        number of processors "
   echo " --niters=<niters>                nubmer of iterations "
   echo " --graph=<graph_name>             graph name [nf, udata]"
-  echo " --d=<als nlatent>                number of latent "
+  echo " --d=<svdpp nlatent>              number of latent "
   echo ""
   exit 1
 } # end of print_help
@@ -95,7 +95,7 @@ if [ $s_graph == "nf" ] ; then
   GRAPH_PREFIX=/home/zork/data/nf/glab_in/nf.snap
   OUT_DIR=/home/zork/data/nf/glab_${k_node}_out
 elif [ $s_graph == "udata" ] ; then
-  GRAPH_PREFIX=/home/zork/data/udata/glab_in/udata.snap
+  GRAPH_PREFIX=/home/zork/data/udata/glab_in/cf/udata.snap
   OUT_DIR=/home/zork/data/udata/glab_${k_node}_out
 else 
   unknown_graph $s_graph 
@@ -105,7 +105,7 @@ mkdir -p ${OUT_DIR}
 
 OUT_PREFIX=${OUT_DIR}/${s_graph}_${k_latent}_${k_niters}
 
-APP=/home/zork/dev-pla/graphlab/release/toolkits/collaborative_filtering/als
+APP=/home/zork/dev-pla/graphlab/release/toolkits/collaborative_filtering/svdpp
 
 # Pagerank ops
 APP_OPTS="--matrix ${GRAPH_PREFIX}"
