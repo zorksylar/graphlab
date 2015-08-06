@@ -5,6 +5,9 @@
 # --------------------------------------------------#
 EXEC=/home/zork/loclib/mpich-3.1.4/bin/mpiexec
 export LD_LIBRARY_PATH=/home/zork/loclib/mpich-3.1.4/lib/
+export GRAPHLAB_SUBNET_ID=10.0.0.0
+export GRAPHLAB_SUBNET_MASK=255.255.255.0
+
 
 # -------------------------------------------------#
 # Function Defines
